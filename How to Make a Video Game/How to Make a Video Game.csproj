@@ -132,6 +132,8 @@
     <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
     <Compile Include="Assets\Scripts\DontDestroy.cs" />
+    <Compile Include="Assets\Scripts\FlyMovement.cs" />
+    <Compile Include="Assets\Scripts\FlyPickup.cs" />
     <Compile Include="Assets\Scripts\FollowCamera.cs" />
     <Compile Include="Assets\Scripts\GameQuality.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
