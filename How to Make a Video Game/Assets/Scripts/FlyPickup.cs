@@ -14,6 +14,9 @@ public class FlyPickup : MonoBehaviour
             Instantiate(pickupPrefab, transform.position, Quaternion.identity);
 
             Destroy(gameObject);
+
+            // decrease the number of flies
+            FlySpawner.TotalFlies--;
         }
     }
 }
