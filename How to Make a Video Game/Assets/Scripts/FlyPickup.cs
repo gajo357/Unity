@@ -17,6 +17,7 @@ public class FlyPickup : MonoBehaviour
 
             // decrease the number of flies
             FlySpawner.TotalFlies--;
+            ScoreCounter.Score++;
         }
     }
 }
