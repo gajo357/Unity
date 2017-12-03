@@ -2,9 +2,12 @@
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField]
+    private RandomSoundPlayer playerFootsteps;
+
     private Animator _playerAnimator;
     private Rigidbody _playerRigidbody;
-
+    
     private float _moveHorizontal;
     private float _moveVertical;
     private Vector3 _movement;
@@ -49,10 +52,16 @@ public class PlayerMovement : MonoBehaviour
 
             // actually move
             _playerAnimator.SetFloat("Speed", 3f);
+
+            // play footsteps
+            playerFootsteps.enabled = true;
         }
         else
         {
             _playerAnimator.SetFloat("Speed", 0f);
+
+            // don't play footsteps
+            playerFootsteps.enabled = true;
         }
     }
 }

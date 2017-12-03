@@ -20,7 +20,7 @@ public class GameState : MonoBehaviour
     private bool _gameStarted = false;
 
     private float _restartDelay = 3f;
-    private float _restartTimer;
+    private float _restartTimer = 0f;
 
     // Use this for initialization
 	private void Start ()
@@ -47,7 +47,7 @@ public class GameState : MonoBehaviour
             StartGame();
         }
         // player no longer alive
-        else if(_gameStarted && !_playerHealth.Alive)
+        else if(!_playerHealth.Alive)
         {
             EndGame();
 
@@ -59,6 +59,8 @@ public class GameState : MonoBehaviour
                 // unity has built in management
                 // relad the currently loaded game
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+                _restartTimer = 0;
             }
         }
     }

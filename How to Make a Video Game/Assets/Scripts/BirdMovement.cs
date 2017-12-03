@@ -6,6 +6,9 @@ public class BirdMovement : MonoBehaviour
     [SerializeField]
     private Transform target;
 
+    [SerializeField]
+    private RandomSoundPlayer birdFootsteps;
+
     private NavMeshAgent birdAgent;
     private Animator birdAnimator;
 
@@ -27,5 +30,7 @@ public class BirdMovement : MonoBehaviour
 
         // pass the velocity to animator component
         birdAnimator.SetFloat("Speed", speed);
+
+        birdFootsteps.enabled = speed > 0;
 	}
 }
